@@ -1,0 +1,219 @@
+/* Importing Google Font - Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+    --border-color: rgba(109, 109, 109, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    min-height: 100vh;
+    background: #d46d0cc2;
+}
+
+h3 {
+    position: fixed;
+    top: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+h4 {
+    position: fixed;
+    top: 40px;
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    max-width: 690px;
+    width: 100%;
+    padding: 30px;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px var(--border-color);
+}
+
+.cover {
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
+.cover .userText {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.userText .toText {
+    border-radius: 0px;
+    border-left: 1px solid var(--border-color);
+}
+
+.userText textarea {
+    height: 250px;
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    background: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.userText textarea::placeholder {
+    color: #b7b6b6a2;
+}
+
+.options,
+li,
+.icons,
+.icons i {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.options {
+    list-style-type: none;
+    padding: 12px 15px;
+}
+
+.options .row .icons {
+    width: 38%;
+}
+
+.options .row .icons i {
+    width: 50px;
+    color: #8d8d8d;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    justify-content: center;
+}
+
+.options .row.from .icons {
+    padding-right: 15px;
+    border-right: 1px solid var(--border-color);
+}
+
+.options .row.to .icons {
+    padding-left: 15px;
+    border-left: 1px solid var(--border-color);
+}
+
+.options .row select {
+    color: #333;
+    border: none;
+    outline: none;
+    font-size: 21px;
+    background: none;
+    padding-left: 5px;
+}
+
+.userText textarea::-webkit-scrollbar {
+    width: 4px;
+    /* cleaner/smaller scrollwheel*/
+}
+
+.options .row select::-webkit-scrollbar {
+    width: 8px;
+    /* cleaner/smaller scrollwheel*/
+}
+
+.userText textarea::-webkit-scrollbar-track,
+.options .row select::-webkit-scrollbar-track {
+    background: rgb(124, 124, 124);
+}
+
+.userText textarea::-webkit-scrollbar-thumb {
+    background: rgb(212, 212, 212);
+    border-radius: 8px;
+}
+
+.options .row select::-webkit-scrollbar-thumb {
+    background: rgb(167, 167, 167);
+    border-radius: 8px;
+    border-right: 2px solid var(--border-color);
+}
+
+.options .swap {
+    color: grey;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.options i:active {
+    transform: scale(0.75);
+}
+
+.container button {
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+    border-radius: 5px;
+    background: #1036ce;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width: 660px) {
+    h4 {
+        position: fixed;
+        top: 60px;
+        color: rgb(255, 255, 255);
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .cover .userText {
+        flex-direction: column;
+    }
+
+    .userText .toText {
+        border-left: 0px;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .userText textarea {
+        height: 200px;
+    }
+
+    .options .row .icons {
+        display: none;
+    }
+
+    .container button {
+        padding: 13px;
+        font-size: 16px;
+    }
+
+    .options .row select {
+        font-size: 16px;
+    }
+
+    .options .swap {
+        font-size: 14px;
+    }
+}
